@@ -1,0 +1,186 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100px;
+    font-style: normal;
+    line-height: 1.5;
+}
+
+/* NavBar */
+header{
+height: 80px;
+background: #02027C;
+}
+
+a {
+    font-style: italic;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    overflow: hidden; /* quando o li passa dos limites ele some */
+}
+
+li {
+    padding: 10px;
+    margin: 18px;
+}
+
+/* INICIO */
+li a{
+display: block;
+text-decoration: none;
+ }
+
+ #logo {
+    height: 67.56px;
+    width: 62.16px;
+    margin: 8px;
+    position: absolute;
+ }
+
+ #leoncio-img {
+    display: block;
+    position: relative;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+ }
+
+ #azul-container {
+    width: 100%;         
+    height: auto;        
+    background-color: #02297D; 
+    padding-right: 0px;
+ }
+
+/* Anos de atuação escoteira no Acre */
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    overflow: hidden;
+  }
+
+  .bloco1 {
+    max-width: 222.47px;
+  }
+
+  .bloco2 {
+    max-width: 222.47px;
+  }
+
+  .bloco3 {
+    max-width: 351px;
+  }
+
+  .numero {
+    color: #FAF411;
+    font-size: 200px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+  }
+
+  .numero::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background-color: #FAF411;
+  }
+
+  .texto {
+    text-align: left;
+    color: #FAF411;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-size: 35px;
+    line-height: 1.3;
+    width: 235px;
+  }
+
+  .texto2 {
+    text-align: left;
+    color: #FAF411;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-size: 35px;
+    line-height: 1.3;
+    width: 351px;
+  }
+
+
+  .missao-container {
+    margin-top: 100px;
+    display: flex;
+    background-color: #fff45f;
+    padding: 20px;
+    border-radius: 10px;
+    width: 1380px;
+    height: 437px;
+  }
+
+  .missao-texto {
+    flex: 1;
+    max-width: 652px;
+    margin-left: 40px;
+  }
+
+  .missao-texto h3 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .missao-texto p {
+    text-align: center;
+    font-size: 24px;
+    width: 652px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  .missao-texto a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+
+  .missao-imagem img {
+    margin-left: 120px;
+    margin-right: 20px;
+    width: 527.38px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .missao-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .missao-texto {
+      padding-right: 0;
+    }
+
+    .missao-imagem img {
+      margin-top: 20px;
+    }
+  }
