@@ -1,209 +1,131 @@
-/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100px;
-    font-style: normal;
-    line-height: 1.5;
-}
-
-/* NavBar */
-header{
-height: 80px;
-background: #02027C;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    color: #FAF411;
-    text-decoration: none;
-    font-weight: bold;
+  font-family: sans-serif;
+  text-decoration: none;
 }
 
-ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    color: white;
-    overflow: hidden; /* quando o li passa dos limites ele some */
+.header {
+  background: #02027C;
+  padding-inline: 16px;
 }
 
-li {
-    padding: 10px;
-    margin: 18px;
+.nav {
+  max-width: 1280px;
+  height: 70px;
+  margin-inline: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* INICIO */
-li a{
-display: block;
-text-decoration: none;
- }
-
- #logo {
-    height: 67.56px;
-    width: 62.16px;
-    margin: 8px;
-    position: absolute;
- }
-
- #leoncio-img {
-    display: block;
-    position: relative;
-    margin: 0px;
-    width: 100%;
-    height: auto;
- }
-
- #azul-container {
-    width: 100%;         
-    height: auto;        
-    background-color: #02297D; 
-    padding-right: 0px;
- }
-
-/* Anos de atuação escoteira no Acre */
-
-.container {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    overflow: hidden;
-  }
-
-  .bloco1 {
-    max-width: 222.47px;
-  }
-
-  .bloco2 {
-    max-width: 222.47px;
-  }
-
-  .bloco3 {
-    max-width: 351px;
-  }
-
-  .numero {
-    color: #FAF411;
-    font-size: 200px;
-    font-weight: bold;
-    position: relative;
-    display: inline-block;
-  }
-
-  .numero::after {
-    content: "";
-    display: block;
-    height: 4px;
-    background-color: #FAF411;
-  }
-
-  .texto {
-    text-align: left;
-    color: #FAF411;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    font-size: 35px;
-    line-height: 1.3;
-    width: 235px;
-  }
-
-  .texto2 {
-    text-align: left;
-    color: #FAF411;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    font-size: 35px;
-    line-height: 1.3;
-    width: 351px;
-  }
-
-  /*Missão*/
-
-  .missao-container {
-    justify-content: space-around;
-    margin-top: 100px;
-    display: flex;
-    background-color: #fff45f;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 1380px; /* largura máxima desejada */
-    width: 100%;        /* ocupa o espaço até o máximo */
-  }
-
-  .missao-texto {
-    flex: 1;
-    width: 652px;
-    height: auto;
-    margin-left: 90px;
-  }
-
-  .missao-texto h3 {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  .missao-texto p {
-    text-align: center;
-    font-size: 24px;
-    width: 652px;
-    margin-bottom: 20px;
-    line-height: 2.5;
-    letter-spacing: 3.5px;
-  }
-
-  #saibamais {
-    margin-left: 275px;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-  }
-
-  .missao-imagem {
-    flex: 1;
-    max-width: 50%;
-    margin-left: 50px;
-  }
+.logo {
+  font-size: 48px;
+  width: 65.906px;
+  height: auto;
   
-  .missao-imagem img {
-    margin-top: 30px;
-    width: 527.38px;
-    height: 382px;
-    border-radius: 10px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 13px;
+  list-style: none;
+}
+
+.nav-list a {
+  font-size: 18px;
+  color: #fff;
+  padding-block: 16px;
+}
+
+.hamburger {
+  display: none;
+  border: none;
+  background: none;
+  border-top: 3px solid #fff;
+  cursor: pointer;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin-top: 5px;
+  position: relative;
+  transition: 0.3s;
+}
+
+@media (max-width: 750px) {
+  .hamburger {
+    display: block;
+    z-index: 1;
   }
 
-  @media (max-width: 768px) {
-    .missao-container {
-      flex-direction: column;
-      text-align: center;
-    }
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #02027C;
+    clip-path: circle(100px at 90% -15%);
+    transition: 1s ease-out;
 
-    .missao-texto {
-    flex: 1;
-    width: 390px;
-    height: auto;
-    margin-left: 0px;
-    }
-
-    .missao-texto p {
-      text-align: center;
-      font-size: 24px;
-      width: 390px;
-      margin-bottom: 20px;
-      line-height: 1.5;
-      letter-spacing: 3.5px;
-    }
-
-    #saibamais {
-      margin-left: 50 px;
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-    }
-
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    pointer-events: none;
   }
+
+  .nav-list a {
+    font-size: 24px;
+    opacity: 0;
+  }
+
+  .nav-list li:nth-child(1) a {
+    transition: 0.5s 0.2s;
+  }
+
+  .nav-list li:nth-child(2) a {
+    transition: 0.5s 0.4s;
+  }
+
+  .nav-list li:nth-child(3) a {
+    transition: 0.5s 0.6s;
+  }
+
+  /* Estilos ativos*/
+
+  .nav.active .nav-list {
+    clip-path: circle(1500px at 90% -15%);
+    pointer-events: all;
+  }
+
+  .nav.active .nav-list a {
+    opacity: 1;
+  }
+
+  .nav.active .hamburger {
+    position: fixed;
+    top: 26px;
+    right: 16px;
+    border-top-color: transparent;
+  }
+
+  .nav.active .hamburger::before {
+    transform: rotate(135deg);
+  }
+
+  .nav.active .hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
